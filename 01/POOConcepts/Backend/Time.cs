@@ -139,7 +139,7 @@ public class Time
     {
         return (Hour * 60L * 60L * 1000L)
              + (Minute * 60L * 1000L)
-             + (Second * 100L)
+             + (Second * 1000L)
              + Millisecond;
     }
 
@@ -160,11 +160,6 @@ public class Time
     public override string ToString()
     {
         int hour = Hour % 12;
-
-        if (hour == 0)
-       {
-          hour = 12;
-        }
 
         string period = Hour < 12 ? "AM" : "PM";
 
